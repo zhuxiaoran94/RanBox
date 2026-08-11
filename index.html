@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="竹小冉测试百宝箱：离线、零依赖的前端测试与开发工具集合。">
+  <title>竹小冉测试百宝箱</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#workspace">跳到工作区</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="工具导航">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" role="img"><path d="M8 7h9v9H8zM19 7h9v9h-9zM8 18h9v11H8zM19 18h9v5h-9zM19 25h9v4h-9z"/></svg>
+        </span>
+        <span><strong>竹小冉</strong><small>测试百宝箱</small></span>
+      </div>
+      <label class="search-box">
+        <span class="sr-only">搜索工具</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
+        <input id="tool-search" type="search" placeholder="搜索工具…" autocomplete="off">
+        <kbd>/</kbd>
+      </label>
+      <nav id="tool-nav"></nav>
+      <div class="privacy-note"><span class="pulse-dot"></span>全部计算在本地完成</div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <button class="icon-button menu-button" id="menu-button" type="button" aria-label="打开工具导航" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div class="title-block">
+          <p id="tool-group">JSON 与数据</p>
+          <h1 id="tool-title">JSON 格式化</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="ghost-button" id="load-example" type="button">加载示例</button>
+          <button class="ghost-button" id="clear-tool" type="button">清空</button>
+        </div>
+      </header>
+
+      <div class="status-strip" role="status" aria-live="polite">
+        <div><span class="status-light" id="status-light"></span><strong id="status-main">准备就绪</strong></div>
+        <div class="status-meta" id="status-meta"><span>0 字符</span><span>0 字节</span><span>本地处理</span></div>
+      </div>
+
+      <main id="workspace" class="workspace" tabindex="-1">
+        <noscript><div class="notice error">此工具需要启用 JavaScript。</div></noscript>
+      </main>
+    </div>
+  </div>
+
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <div class="mobile-backdrop" id="mobile-backdrop"></div>
+  <script src="app.js"></script>
+</body>
+</html>
